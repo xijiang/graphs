@@ -1,0 +1,35 @@
+\documentclass[tikz]{standalone}
+\usepackage{fontspec,xunicode,xltxtra}
+\usepackage{siunitx}
+\setmainfont{FangSong}
+\begin{document}
+\begin{tikzpicture}
+  %\draw[help lines] (0,0) grid (11.5,7);
+  %\foreach \x in {0, 1, ..., 9} \node[below, gray!50] at (\x,0){\tiny{\x}};
+  %\foreach \y in {1, 2, ..., 7} \node[left, gray!50] at (0,\y){\tiny{\y}};
+  \node[right] at (0,6.5) {\Large 参考群体：建立预测公式};
+  \foreach \x in {0.4, 1.2, 2.0}{
+    \foreach \y in {4.6, 5.0, 5.4} \node[inner sep=0pt] at(\x, \y) {\includegraphics[width=.7cm]{rainbow-trout.png}};
+  }
+  \draw[cyan, very thick, ->](2.4,5)--(4,5);
+  \node[align=center] at (5.5, 5){表现型\\+\\上万的 SNP 基因型};
+  \draw[cyan, very thick, ->](7, 5) -- (8.5, 5);
+  \node[align=center] at (10, 5.5){关联\\SNP 和表现型};
+  \draw[fill, rounded corners, red!20!white] (9, 4.2) rectangle (11, 5);
+  \node (eq) at (10, 4.6) {预测公式};
+
+  \draw[dashed, thick, blue!30!black] (0, 3.8) -- (11.5, 3.8);
+  \draw[dashed, thick, blue!30!black] (0, 3.7) -- (11.5, 3.7);
+
+  \draw[cyan, very thick, <->] (1.2, 2.3) -- node[right] {遗传关系} (1.2, 4.3);
+  \node at (1.2, 2) {\includegraphics[width=1.5cm]{rainbow-trout.png}};
+  \draw[cyan, very thick, ->] (2, 2) -- (4,2);
+  \node[align=center] at (5.5,2.5) {上万的 SNP 基因型\\+};
+  \draw[fill, rounded corners, red!20!white] (4.5, 1.2) rectangle (6.5, 2);
+  \node (eq2) at (5.5, 1.6) {预测公式};
+  \draw[very thick, dashed, ->, red!50!black] (10, 4.2) to [out=-90, in=15] (6.5, 2);
+  \draw[cyan, very thick, ->] (7, 2) --(9, 2);
+  \node at (10, 2) {基因组育种值};
+  \node[right] at (0, 0.5) {\large 主要群体：使用预测公式};
+\end{tikzpicture}
+\end{document}
