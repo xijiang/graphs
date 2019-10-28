@@ -1,0 +1,15 @@
+\documentclass[tikz]{standalone}
+\begin{document}
+\begin{tikzpicture}
+    \draw[help lines] (0,0) grid (11.5,7);
+    \foreach \x in {0, 1, ..., 9} \node[below, gray!50] at (\x,0){\tiny{\x}};
+    \foreach \y in {1, 2, ..., 7} \node[left, gray!50] at (0,\y){\tiny{\y}};
+    \node at(1,6){\LARGE $\mathbf{y}$};
+    \node at(2,6){\LARGE $=$};
+    \node at(3,6){\LARGE $\mathbf{Xb}$};
+    \node at(4,6){\LARGE $+$}
+    \node at(5,6){\LARGE $\mathbf{Zu}$};
+    \node at(6,6){\LARGE $+$}
+    \node at(7,6){\LARGE $\mathbf{e}$};
+\end{tikzpicture}
+\end{document}
