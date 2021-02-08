@@ -1,6 +1,8 @@
 \documentclass[tikz]{standalone}
 \begin{document}
 \begin{tikzpicture}
+  %if to convert to jpg/png. but pdf is usually enougth.
+  %convert -verbose -density 300 gs-data-structure.pdf -quality 100 -flatten -sharpen 0x1.0 t.jpg
   %\draw[help lines] (0,0) grid (12,5.5);
   %\foreach \x in {0, 1, ..., 11} \node[below, gray!50] at (\x,0){\tiny{\x}};
   %\foreach \y in {1, 2, ..., 6} \node[left, gray!50] at (0,\y){\tiny{\y}};
@@ -38,7 +40,8 @@
     \end{array}$};
   \draw[->, very thick, rounded corners] (7,4.2)--(7,5)--(5,5)--(5,4.2);
   \node[above] at (6, 5) {Dropping};
-  \node[right] at (7, 4.5) {$N_{\mathrm{female}}$};
-  \node[left] at (7, 4.5) {$N_{\mathrm{male}}$};
+  \node[below] at (6, 5) {Pedigree};
+  \node[right] at (7, 2.5) {$N_{\mathrm{female}}$};
+  \node[left] at (7, 2.5) {$N_{\mathrm{male}}$};
 \end{tikzpicture} 
 \end{document}
